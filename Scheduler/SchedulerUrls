@@ -1,0 +1,41 @@
+http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html
+https://www.baeldung.com/spring-scheduled-tasks
+https://www.tutorialspoint.com/spring_boot/spring_boot_scheduling.htm
+https://www.baeldung.com/cron-expressions
+
+https://crontab.guru/#1_0_1_*_*
+
+https://docs.oracle.com/cd/B13866_04/webconf.904/b10877/timezone.htm
+
+https://javastudy.ru/spring-mvc/schedule-cron-quartz/
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronExpression.html
+https://docs.spring.io/spring-framework/docs/4.1.x/spring-framework-reference/html/scheduling.html
+
+https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm  about cron expression
+
+https://dzone.com/articles/multiple-cron-task-with-spring-boot-scheduler
+https://www.baeldung.com/spring-scheduled-tasks
+https://riteshshergill.medium.com/dynamic-task-scheduling-with-spring-boot-6197e66fec42
+https://learnwithtaufik.home.blog/2019/03/05/dynamic-scheduling-with-spring-boot/
+https://dzone.com/articles/dynamic-schedulers-and-custom-cross-server-schedul
+https://allaboutspringframework.com/spring-schedule-tasks-or-cron-jobs-dynamically/
+https://vinodhinic.medium.com/spring-scheduler-dynamically-changing-the-schedule-49735fd69317
+
+http://www.quartz-scheduler.org/documentation/2.4.0-SNAPSHOT/tutorials/tutorial-lesson-12.html
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.quartz  спринг хранение бинов шедулера
+
+
+form reminder cron in service 
+
+* 06 11 * * ?
+* 06 11 * 10 ?
+* 06 11 * 02 *
+* 06 11 * L 1
+once a week
+* 06 11 ? * 7
+* 06 11 ? * 1
+once a month
+* 06 11 L * *
+* 06 11 31 * *

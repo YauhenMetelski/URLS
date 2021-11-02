@@ -1,0 +1,52 @@
+https://phoenixnap.com/kb/mysql-docker-container
+sudo docker pull mysql/mysql-server:latest
+sudo docker run --name=[container_name] -d [image_tag_name]
+The -d option instructs Docker to run the container as a service in the background.
+apt-get install mysql-client
+sudo docker logs [container_name]
+[Entrypoint] GENERATED ROOT PASSWORD: copy and paste the password in a notepad or text editor so you can use it later
+sudo docker exec -it [container_name] bash
+mysql -u root -p
+Provide the root password you copied from 
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '[newpassword]';
+
+
+
+
+
+docker exec -it mysql bash
+mysql -u root -p
+SELECT host, user FROM mysql.user;
+
+CREATE USER 'bestuser'@'%' IDENTIFIED BY 'bestuser';
+
+
+The -d option used in the docker run command above makes the container run in the background. Use this command to monitor the output from the container: 
+
+https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/docker-mysql-getting-started.html
+
+
+
+mysql> update mysql.user set host = ‘%’ where user=’root’;
+Query OK, 1 row affected (0.02 sec)
+
+(https://medium.com/tech-learn-share/docker-mysql-access-denied-for-user-172-17-0-1-using-password-yes-c5eadad582d3) from here
+Step 2:
+
+mysql>  CREATE USER 'nilu'@'172.17.0.1' IDENTIFIED BY 'password';
+
+Step 3:
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'nilu'@'172.17.0.1' WITH GRANT OPTION;
+
+Step 4 :
+
+mysql> flush privileges; 
+mysql> exit
+
+
+https://hub.docker.com/_/mysql
+
+$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+
+... where some-mysql is the name you want to assign to your container, my-secret-pw is the password to be set for the MySQL root user and tag is the tag specifying the MySQL version you want. See the list above for relevant tags.

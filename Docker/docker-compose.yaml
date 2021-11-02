@@ -1,0 +1,9 @@
+version: '3'
+services:
+ j2j_service:
+   image: ${J2J_IMAGE_NAME:-j2j_service}:${J2J_IMAGE_VERSION:-latest}
+   container_name: j2j_service
+   ports:
+     - '8081:8080'
+     
+#example in root folder
