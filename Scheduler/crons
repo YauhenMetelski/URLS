@@ -1,8 +1,37 @@
 Once a week
 * 06 11 ? * 7
 * 06 11 ? * 1
+0 06 11 ? * 7
+0 06 11 ? * 1
 once a month
-* 06 11 L * *
-* 06 11 17 * *
+* 06 11 L * ?
+* 06 11 17 * ?
+0 06 11 L * ?
+0 06 11 17 * ?
 every day
 * 06 11 * * ?
+0 06 11 * * ?
+
+@ManyToMany(fetch = FetchType.EAGER)
+@Fetch(value = FetchMode.SUBSELECT)
+
+last version
+* 08 12 * * ?
+0 08 12 * * ?
+0 8 09 * * ?
+0 11 4 ? * WED
+0 11 4 ? * MON
+0 11 4 ? * TUE
+0 11 4 ? * WED
+0 11 4 ? * THU
+0 11 4 ? * FRI
+0 11 4 ? * SAT
+0 11 4 ? * SUN
+once a month
+0 11 21 17 * ?
+0 11 21 L * ?
+once a week
+0 24 11 ? * FRI
+0 24 11 ? * 5
+
+

@@ -26,6 +26,10 @@ http://www.quartz-scheduler.org/documentation/2.4.0-SNAPSHOT/tutorials/tutorial-
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.quartz  спринг хранение бинов шедулера
 
+https://www.baeldung.com/spring-retry  RETRY AND RECOVER
+
+https://habr.com/ru/post/580062/    Выполнение запланированных заданий в Spring Boot  есть гит с проектом!!!
+
 
 form reminder cron in service 
 
