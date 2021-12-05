@@ -1,0 +1,20 @@
+/home/INTEXSOFT/evgeny.metelsky/java/microsoft-jdk-11.0.12.7.1-linux-x64/jdk-11.0.12+7
+
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java
+
+/usr/lib/jvm/default-java  Oleg's java_home
+
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04  ПОследние действия
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+/usr/lib/jvm/java-11-openjdk-amd64
+
+https://askubuntu.com/questions/175514/how-to-set-java-home-for-java
+https://stackoverflow.com/questions/9612941/how-to-set-java-environment-path-in-ubuntu
+https://itsfoss.com/set-java-home-ubuntu/
+https://qastack.ru/ubuntu/459900/how-to-find-my-current-java-home-in-ubuntu
+https://docs.microsoft.com/en-us/java/openjdk/install
+
+https://linuxways.net/ubuntu/how-to-install-gradle-on-ubuntu-20-04/
+
+https://services.gradle.org/distributions/gradle-7.2-bin.zip

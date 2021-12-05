@@ -1,0 +1,14 @@
+wget https://services.gradle.org/distributions/gradle-7.2-bin.zip
+sudo unzip -d /opt/gradle gradle-7.2-bin.zip
+ls /opt/gradle/gradle-7.2
+sudo nano /etc/profile.d/gradle.sh
+
+sudo chmod +x /etc/profile.d/gradle.sh
+source /etc/profile.d/gradle.sh
+gradle -v
+
+task getHomeDir {
+    doLast {
+        println gradle.gradleHomeDir
+    }
+}
