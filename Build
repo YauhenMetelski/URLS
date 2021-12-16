@@ -1,0 +1,4 @@
+sudo apt install nodejs npm
+
+./gradlew sonarqube   -Dsonar.projectKey=j2j   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=9a7acd05a958fb30e3ec1430bf0cbcb0705bcf23
+

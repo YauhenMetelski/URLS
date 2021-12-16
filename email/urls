@@ -1,0 +1,23 @@
+https://www.baeldung.com/spring-email    spring email
+https://mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/   examples
+https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/mail.html   official doc email
+
+https://serverfault.com/questions/543007/google-smtp-error-454-4-7-0-too-many-login-attempts-please-try-again-later
+
+        Session session = Session.getInstance();
+        Transport transport = session.getTransport("smtp");
+        transport.connect("user","password");
+        
+        https://stackoverflow.com/questions/18778240/solve-error-javax-mail-authenticationfailedexception?rq=1
+        
+        2021-12-03 15:40:37.835 DEBUG 25608 --- [nio-8080-exec-2] by.metelski.mail.service.EmailService    : Try to send email number: 78
+2021-12-03 15:40:37.835  INFO 25608 --- [nio-8080-exec-2] by.metelski.mail.service.EmailService    : Try to send message
+2021-12-03 15:40:37.835  INFO 25608 --- [nio-8080-exec-2] by.metelski.mail.service.EmailService    : Sending message ...
+2021-12-03 15:40:38.435 ERROR 25608 --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 454 4.7.0 Too many login attempts, please try again later. i10sm356663lfv.22 - gsmtp
+] with root cause
+
+javax.mail.AuthenticationFailedException: 454 4.7.0 Too many login attempts, please try again later. i10sm356663lfv.22 - gsmtp
+
+
+2021-12-06 11:11:16.966 ERROR 11992 --- [nio-8080-exec-2] by.metelski.mail.service.EmailService    : Message wasn't send to lynxfortest@gmail.com . Error : 421 4.7.0 Try again later, closing connection. (MAIL) l12sm1289399lfe.81 - gsmtp
+
