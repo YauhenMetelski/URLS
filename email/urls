@@ -21,3 +21,4 @@ javax.mail.AuthenticationFailedException: 454 4.7.0 Too many login attempts, ple
 
 2021-12-06 11:11:16.966 ERROR 11992 --- [nio-8080-exec-2] by.metelski.mail.service.EmailService    : Message wasn't send to lynxfortest@gmail.com . Error : 421 4.7.0 Try again later, closing connection. (MAIL) l12sm1289399lfe.81 - gsmtp
 
+
