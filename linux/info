@@ -1,0 +1,5 @@
+https://www.hostinger.ru/rukovodstva/udalenije-papki-i-failov-linux    удаление консоль
+cd ..  в каталог выше
+ls содержимое
+sudo rmdir -r рекурсивно удалит папку
+sudo rmdir -i будет запрашивать удалять файл или нет

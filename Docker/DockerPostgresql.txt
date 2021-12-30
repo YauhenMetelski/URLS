@@ -1,3 +1,13 @@
 https://habr.com/ru/post/578744/
 
 docker run --name postgresql -p 5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=test_db -d postgres:latest
+docker exec -it [container_name] psql -U [postgres_user]
+docker exec -it 
+docker exec -it [container_name] bash
+
+psql -U user -d test_db
+\d  лист
+select * from bank_account;  выбрать все из таблицы bank_account
+\q                       exit from psql
+exit                     exit from bash
+

@@ -15,3 +15,14 @@ https://www.baeldung.com/hibernate-criteria-queries
 https://docs.jboss.org/hibernate/orm/4.3/topical/html/metamodelgen/MetamodelGenerator.html
 https://docs.jboss.org/hibernate/stable/entitymanager/reference/en/html/querycriteria.html
 http://java-online.ru/hibernate-criteria.xhtml
+https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html
+https://www.youtube.com/watch?v=oJi4ljPJ6IA
+https://www.youtube.com/watch?v=NDPFZ09BjiI
+
+https://vladmihalcea.com/jpa-entity-identifier-sequence/
+
+https://easyjava.ru/data/jpa/hello-jpa-i-hibernate/      JPA
+https://betacode.net/11665/spring-boot-hibernate-and-spring-transaction   bank_account
+
+https://howtodoinjava.com/jpa/jpa-native-query-example-select/     JPA @NamedNativeQuery
+https://docs.oracle.com/javaee/6/tutorial/doc/gjise.html    JAVA EE Tutorial named native query
