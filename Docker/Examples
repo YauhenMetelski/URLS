@@ -1,0 +1,51 @@
+docker run -p 8081:80 -v /home/INTEXSOFT/evgeny.metelsky/containers/nginx:/usr/share/nginx/html nginx   -both add volume and replace fails in nginx to files located in containers/nginx
+
+
+Note!!!! When you use $PWD you MUST run your command terminal from folder where located tour files.
+docker run -p 8081:80 -v $PWD:/usr/share/nginx/html nginx
+
+docker ps -a
+docker container ls -a   the same
+
+docker --help
+docker container --help
+
+docker kill {container_id}
+
+docker inspect {container_id}   information about container (for example ip address)
+
+ctrl + l clear terminal
+
+docker history alpine     container history
+
+ docker run -p 8080:80 -d nginx    -d allow to start container in background mode
+ 
+ docker logs {container_id}      show containers logs, container_id can consist from 3 letters
+ 
+ docker run -i alpine  run container with standard in
+ docker run -t alpine  run container with standard out
+ docker run -it alpine 
+
+docker rm {container_name}
+docker container prune    removes all stopped containers
+docker container rm {container_id} {container_id} {container_id}   removes multiply containers
+
+docker run -it -v $PWD:/app python python3 /app/hello-world.py   runs simple python app in specified folder(copies python file from pc volume(located $PWD) to container folder)
+
+docker run -it -v $PWD:/app -w /app python python3 hello-world.py almost the same (-w option specified working directory)
+
+docker start {container_id}                             starts created container  
+docker exec -it {container_id} python3 hello-world.py   runs application in created earlier container
+
+docker run -v $PWD:/app -w /app node node hello.js     runs simple node.js app in specified folder first node it's image name second node it's command name executed when container created
+
+docker run -it -v $PWD:/app -w /app  openjdk java Hello  runs simple COMPILED java app in container with openjdk
+
+
+docker run -it -v $PWD:/app -w /app  node npm init                         initialize 
+docker run -it -v $PWD:/app -w /app  node npm install express              install npm in local folder "express"
+docker run -it -v $PWD:/app -w /app -p 3000:3000 node node index.js        runs container
+
+
+docker run -d -v $PWD/db:/data/db mongo            runs mongo db with volume pwd+/db location
+

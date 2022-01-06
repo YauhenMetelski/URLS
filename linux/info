@@ -3,3 +3,11 @@ cd ..  в каталог выше
 ls содержимое
 sudo rmdir -r рекурсивно удалит папку
 sudo rmdir -i будет запрашивать удалять файл или нет
+ps -e show all processes
+uname -m information about system for example x86_64
+uname -i  the same as above
+uname -a additional information about system
+lscpu  information about cpu and other
+sudo tail -f /var/log/syslog   логи
+hostname -i  hostname
+env    environment variables
