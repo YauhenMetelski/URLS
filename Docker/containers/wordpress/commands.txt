@@ -1,0 +1,29 @@
+##CREATE CUSTOM BRIDGE NETWORK
+docker network create wordpress
+
+##Starts MYSQL SERVER
+docker run \
+--network wordpress \
+-e MYSQL_ROOT_PASSWORD=my-password \
+-e MYSQL_DATABASE=wordpress \
+-e MYSQL_USER=wordpress \
+-e MYSQL_PASSWORD=wordpress \
+--name mysql1 \
+-d mysql:5.7
+
+##START WORDPRESS
+docker run \
+--network wordpress \
+--name wordpress \
+-p 8080:80 \
+-d wordpress:5.4
+
+##START PHP MYADMIN with PMA_HOST VArible (over DNS name - name of the container)
+docker run \
+--network wordpress \
+--name phpmyadmin \
+-p 8081:80 \
+-e PMA_HOST=mysql1 \
+-d phpmyadmin/phpmyadmin
+
+J(ABK(bi*v$!ryJ7@x

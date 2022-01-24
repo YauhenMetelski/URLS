@@ -1,0 +1,24 @@
+##PULL REDISCOMMANDER FROM HUB
+docker pull rediscommander/redis-commander
+
+##CREATE CUSTOM BRIDGE NETWORK
+docker network create redis
+
+##CREATE AND START REDIS CONTAUNER
+
+docker run \
+    --network redis \
+    ## NOT NEED -p 6379:6379 \
+    --name redis \
+    -d redis
+
+##START REDISCOMMANDER CONTAINER
+
+docker run \
+    --network redis \
+    -p 8081:8081 \
+    --name rediscommander \
+    -e REDIS_HOST=redis \ 
+    rediscommander/redis-commander
+
+###OR   -e REDIS_PORT=6379 \

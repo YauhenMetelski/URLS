@@ -4,6 +4,7 @@ docker run -p 8081:80 -v /home/INTEXSOFT/evgeny.metelsky/containers/nginx:/usr/s
 Note!!!! When you use $PWD you MUST run your command terminal from folder where located tour files.
 docker run -p 8081:80 -v $PWD:/usr/share/nginx/html nginx
 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 docker ps -a
 docker container ls -a   the same
 
@@ -17,6 +18,12 @@ docker inspect {container_id}   information about container (for example ip addr
 ctrl + l clear terminal
 
 docker history alpine     container history
+
+docker stop $(docker ps)    stops all running containers
+
+docker container rename mysql mysql-db   renames existed container mysql to mysql-db
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
  docker run -p 8080:80 -d nginx    -d allow to start container in background mode
  
@@ -48,4 +55,75 @@ docker run -it -v $PWD:/app -w /app -p 3000:3000 node node index.js        runs 
 
 
 docker run -d -v $PWD/db:/data/db mongo            runs mongo db with volume pwd+/db location
+
+docker run -e MYSQL_ROOT_PASSWORD=my-password mysql  create mysql server and set mysql root password = my-password
+docker exec {container_id} env  shows environment variables setted in container
+
+docker run -p 8080:80 phpmyadmin/phpmyadmin  runs php my admin with port mapping
+docker run -p 8080:80 -e PMA_HOST=172.17.0.2 phpmyadmin/phpmyadmin  add ip address where container with db
+  
+docker run -it --name busybox1 -h busybox-one busybox  runs container busybox with name busybox1(internal name) and hostname busybox-one(external name)
+
+
+docker network ls    show list of networks
+docker network inspect {network_id}  shows information about network
+docker network create custom     creates custom network with name 'custom'
+
+docker run -it --network custom busybox  creates container in custom network('custom')
+
+containers in the custom network could communicate with each other using hostmanes
+or using custom names NOT random generated
+
+
+docker network create mysql
+docker run \
+--network mysql \
+-e MYSQL_ROOT_PASSWORD=my-password \
+--name mysql \                 -name of the container
+-d mysql
+
+docker run \
+--network mysql \
+-p 8080:80 \
+-e PMA_HOST=mysql \           -name of the container
+-d phpmyadmin/phpmyadmin
+
+Pulling specific image
+docker pull mysql:5.7
+docker pull wordpress:5.4
+
+EXAMPLE 3 CONTAINERS in custom network///////////////////////////////////////////////////////////////
+
+##CREATE CUSTOM BRIDGE NETWORK
+docker network create wordpress
+
+##Starts MYSQL SERVER
+docker run \
+--network wordpress \
+-e MYSQL_ROOT_PASSWORD=my-password \
+-e MYSQL_DATABASE=wordpress \
+-e MYSQL_USER=wordpress \
+-e MYSQL_PASSWORD=wordpress \
+--name mysql1 \
+-d mysql:5.7
+
+##START WORDPRESS
+docker run \
+--network wordpress \
+--name wordpress \
+-p 8080:80 \
+-d wordpress:5.4
+
+##START PHP MYADMIN with PMA_HOST VArible (over DNS name - name of the container)
+docker run \
+--network wordpress \
+--name phpmyadmin \
+-p 8081:80 \
+-e PMA_HOST=mysql1 \
+-d phpmyadmin/phpmyadmin
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+docker run -it appropriate/curl sh    override base command [curl] to [sh]
 

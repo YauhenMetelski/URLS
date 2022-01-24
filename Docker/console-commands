@@ -9,5 +9,6 @@ nano ~/.profile - open profile with properties
 docker-compose up run compose
 docker run -it j2j bash
 ls -lv  good structure
+docker stop $(docker ps)    stops all running containers
 
 
