@@ -75,12 +75,15 @@ ls  -shows all files and directories
 ls -l -the same with additional information(permissions, links,user name, group name etc)
 ls -lh the same (size in human readable format with K, M(mega bytes) etc
 ls -la the same + hidden files
+ls -li yhe same + inodes
 ls -F type of files and directories
+ln [file_name] [link_name] creates link to the file
+ln -s [file_name] [link_name] creates soft link to the file
 history   -history of used commands
 [process_name] | grep [filter_criteria]  filter results according to the filter_criteria(for example ls -l | grep hostname)
 cat [file_name] | grep [filter_criteria] filters content of the file
 grep [text] [file_name]   -finds [text] in [file_name]
-ls -l | grep ^l   -finds all lines started from l (in that case all linxs)
+ls -l | grep ^l   -finds all lines started from l (in that case all links)
 ls -l | grep ch$  -finds all lines ends with ch 
 
 permissions:
