@@ -1,0 +1,29 @@
+
+echo $SHELL  -info about used shell
+echo $0 - started shell
+uname -  information about operation system(I think)
+uname -a   -info about system
+uname -r   -info about linux kernel
+uptime  -  info about server up time, users, load
+uptime -p  -only up time
+w     -shows users currently logged in to the server
+echo $PATH  returns paths with executable files
+which [command_name]   shows path to the executable file
+man   - manuals about commands(it doesn't installed)
+unminimize - install additional packeges
+apt-get install man-db    -installs data base of manual pages
+man [command_name]  -manual about command
+ space button(keyboard) scroll down(when a lot of information)
+q   -exit command
+[command_name] --help    -onformation about command
+
+hostname  -all about host
+hostname -i    - ip addresses for the host name
+mkdir [directory_name] makes directory
+mkdir [directory_name1] [directory_name2]  makes directories(names separated by whitespace)
+rm  -remove
+rm -d [directory_name]   -remove empty dir
+rm -r [directory_name]   -remove empty or not empty dir
+date -all about date
+date -d '@2147483647'      convert milliseconds('@2147483647') to date, argument millisec. after whitespace (shot version of command)
+date --dated='@2147483647' the same argement milliseconds after = (long version of command) 
