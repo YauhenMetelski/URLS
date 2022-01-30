@@ -21,9 +21,72 @@ hostname  -all about host
 hostname -i    - ip addresses for the host name
 mkdir [directory_name] makes directory
 mkdir [directory_name1] [directory_name2]  makes directories(names separated by whitespace)
+mkdir [parent_name]/[directory_name]  creates directory in [parent_name] directory
+mkdir -p [parent_name]/[directory_name]  creates [parent_name] directory and [directory_name]directory
 rm  -remove
 rm -d [directory_name]   -remove empty dir
 rm -r [directory_name]   -remove empty or not empty dir
+rm *.txt  -removes all .txt files
+touch [file_name.extension]-creates empty file if there is no such file, or modifying date and timy of access or modifying
+echo "Hello" > file2.txt   -creates new file with "Hello" content
+nano [file_name]  -creates or read created file (you need to install nano edtor)
+cp [file_name] [new_file_name] copies file
+cp -r [directory_name] [destination_directory] copies directory to destination directory
+cp -r [directory_name]/* [destination_directory] copies content of directory to destination directory
+mv [file_name] [new_file_name]  -renames or move file(directory)
+head [file_name] reads first 10 lines
+tail [file_name] reads last 10 lines
+tail -f [file_name] realtime reading
+head -n 3 [file_name] reads first 3 lines
+more [file_name] 
+
+ 
 date -all about date
 date -d '@2147483647'      convert milliseconds('@2147483647') to date, argument millisec. after whitespace (shot version of command)
 date --dated='@2147483647' the same argement milliseconds after = (long version of command) 
+ps -running processes
+top -realtime process monitor
+htop  -realtime process monitor(maybe you need to install it)
+
+docker run -it ubunru (runs container with ubuntu operatig system)
+docker exec -it [running_container_id] bash (starts additional bash process in running container)
+kill [process_id]  -kills the process
+apt-get update   -updates packages
+apt-get install [name_of_the_util]   -installs util for example htop
+htop -u root  -shows all processes ran by user root
+htop --user=root   the same(long version)
+
+[command_name] > [file_name]  - redirects stdout stream produced by command(for example ls) to the file (for example stdout.txt)(example command: ls > stdout.txt)
+cat [file_name]   - shows content of the file
+cat   -reads standard input. Copies standard input to standard output
+[command_name] 2> [file_name]  - redirects stderr stream produced by command(for example mkdir) to the file (for example stderr.txt)(example command: mkdir 2> stderr.txt)
+[process_name] 2>> [file_name]  - redirects stderr stream produced by command(for example mkdir) to the file (for example stderr.txt)(example command: mkdir 2>> stderr.txt) '>>' appends information to the file.
+[process_name] 0< [file_name]   -redirects stdin from bash to file(reads data from file).
+[process_name] | [process2_name]  -pipes(redirects) stdout of process1 to stdin of process2 (for example ls | cat)(DOESN'T work with stderr)
+echo "Hello world" | cat > hello.txt (stdout from echo -> stdin of cat and stdout of cat -> to file hello.txt)
+pwd  -print working directory (directory where are you now)
+cd /  -returns you to root folder
+cd    -returns you to home folder
+cd [folder_name] -moves you to folder with [folder_name] (relative path)
+cd /[folder_name] -moves you to folder with [folder_name] (absolute path) 
+cd . current working directory
+cd .. moves you to level up
+ls  -shows all files and directories
+ls -l -the same with additional information(permissions, links,user name, group name etc)
+ls -lh the same (size in human readable format with K, M(mega bytes) etc
+ls -la the same + hidden files
+ls -F type of files and directories
+history   -history of used commands
+[process_name] | grep [filter_criteria]  filter results according to the filter_criteria(for example ls -l | grep hostname)
+cat [file_name] | grep [filter_criteria] filters content of the file
+grep [text] [file_name]   -finds [text] in [file_name]
+ls -l | grep ^l   -finds all lines started from l (in that case all linxs)
+ls -l | grep ch$  -finds all lines ends with ch 
+
+permissions:
+drwxrwxrwx
+(d -directory,l-linx,- file-)
+rwx - read write execute
+first group - for root user
+second group for group users
+third group for other users
