@@ -7,6 +7,7 @@ uname -r   -info about linux kernel
 uptime  -  info about server up time, users, load
 uptime -p  -only up time
 w     -shows users currently logged in to the server
+whoami  - shows user you are logged in
 echo $PATH  returns paths with executable files
 which [command_name]   shows path to the executable file
 man   - manuals about commands(it doesn't installed)
@@ -15,10 +16,16 @@ apt-get install man-db    -installs data base of manual pages
 man [command_name]  -manual about command
  space button(keyboard) scroll down(when a lot of information)
 q   -exit command
-[command_name] --help    -onformation about command
+[command_name] --help    -information about command
 
 hostname  -all about host
 hostname -i    - ip addresses for the host name
+ip addresess   information about ip issigned to pc
+ip route
+ifconfig
+nslookup servername   - information about server(for example google.com) from dns server
+traceroute servername - all ip addresses between pc and server
+whois servername  - information about owner
 mkdir [directory_name] makes directory
 mkdir [directory_name1] [directory_name2]  makes directories(names separated by whitespace)
 mkdir [parent_name]/[directory_name]  creates directory in [parent_name] directory
@@ -85,11 +92,70 @@ cat [file_name] | grep [filter_criteria] filters content of the file
 grep [text] [file_name]   -finds [text] in [file_name]
 ls -l | grep ^l   -finds all lines started from l (in that case all links)
 ls -l | grep ch$  -finds all lines ends with ch 
+find -name {file-name}  -finds file
+find . -name {file-name}  -finds file in current directory
+find . -name "*.pdf"     - finds all pdf files in current directory
+find . -type f           -finds all files in current directory
+find . -type d           -finds all files in current directory
+find . -type l           -finds all links in current directory
+find . -type l -ls           -finds all links in current directory, and shows them in a table view
+find . -type f -empty     - finds all empty files in current directory
+find . -type f -size +10k   -finds files with size bigger than 10kb
+find . -type f -perm 777 -ls -finds files with specified permission
+find . -name "*.txt" -exec cat {} \;  -shows contents of all txt files, that we a found in current directory
+                           cat - executable command name (will be execuded from one to many times(depends on quantity of found files)
+                            {} - will be replace with path
+                            \; -last argument;
+find . -name "*.txt" -printf "%p %k KB\n"   -shows only name and size
+ls | xargs cat          -cat recived as arguments result of the ls command
+
+find / -name kernel -type d -exec ls -l --color {} \;  the same
+find / -name kernel -type d | xargs ls -l --color      the same
+
+tar -cf archive.tar ~    put all files from current folder into archive.tar
+tar -tf archive.tar      -content of the archive.tar
+gzip archive.tar         -compresses and replacec the archive.tar to archive.tar.gz
+ 
+ls -lS                   - shows files sorted by SIZE
+ls -lSr                   - shows files sorted by SIZE(reverse)
+ls -l --sort=size        -the same
+ls -l --sort=time       - shows files sorted by Time
+ls -l --sort=extension       - shows files sorted by EXTENSION
+sort {file-name}.{file-extension}   -sorts content of the file
+sort -r {file-name}.{file-extension}   -sorts content of the file(reverse)
+sort -o {destination-file-name}.{file-extension} {source-file-name}.{file-extension}   -sorts content of the file and save it to destination file
+sort {source-file-name}.{file-extension} > {destination-file-name}.{file-extension}    -sorts content of the file and save it to destination file
+sort -n  {file-name}.{file-extension}   -sorts content(numbers) of the file
+sort -u   -unic values
+useradd USERNAME ----adds new user
+su USERNAME   - logg in like USERNAME (from root user)
+passwd USERNAME   ----set password for USERNAME
+userdel USERNAME  ---delete user
+adduser USERNAME    -----adds new user with USERNAME(create home dir and setup password and other...)
+chown USERNAME /pathToFile/FILENAME.Extension  ---change owner
+chown USERNAME:GROUPNAME /pathToFile/FILENAME.Extension  ---change owner group
+chown USERNAME:GROUPNAME /path/  ---change owner of directory
+chown -R USERNAME:GROUPNAME /path/  ---change owner of directory and files in it
+chmod 000 /path/FILE.Extension  --modifies permission to the file
+chmod -x /path/FILE.Extension  --removes execution permission
+chmod +x /path/FILE.Extension  --addes execution permission
+chmod g-x /path/FILE.Extension  --removes execution permission for group
+chmod g-r /path/FILE.Extension  --removes read permission for group
+chmod u+x /path/FILE.Extension  --addes execution permission for user
+
+~/FILEName.Extension
+./FILEName.Extension
+/home/USerName/FILEName.Extension    - execute file(3 variants)
+export PATH=$PATH:/home/evgen/bin   -takes Path variable and concatenate to it ":/home/evgen/bin" and write result to PATH
+export NEW_VARIABLE_NAME=NEW_VARIABLE_VALUE   -creates new environment variable and sets value
 
 permissions:
 drwxrwxrwx
 (d -directory,l-linx,- file-)
-rwx - read write execute
+rwx - read write execute = 7
+rw-                      = 6
+r--                      = 4
+r-x                      = 5
 first group - for root user
 second group for group users
 third group for other users
