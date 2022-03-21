@@ -1,0 +1,12 @@
+sudo apt-get install openjdk-7-jdk
+sudo update-alternatives --config java       choose version
+sudo update-alternatives --config javac
+JAVA_HOME
+sudo update-alternatives --config java
+
+copy path (looks like /usr/lib/jvm/java-7-oracle) and add it to
+
+sudo nano /etc/environment
+source /etc/environment
+echo $JAVA_HOME
+
