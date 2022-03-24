@@ -12,3 +12,22 @@ task getHomeDir {
         println gradle.gradleHomeDir
     }
 }
+
+https://baks.dev/article/ubuntu/how-to-install-gradle-on-ubuntu-18-04
+wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-*.zip 
+ls /opt/gradle/gradle-5.0 
+after that you will see smth like that
+bin  getting-started.html  init.d  lib  LICENSE  media  NOTICE
+sudo nano /etc/profile.d/gradle.sh 
+config
+
+
+export GRADLE_HOME=/opt/gradle/gradle-5.0
+export PATH=${GRADLE_HOME}/bin:${PATH}
+ 
+save and close
+sudo chmod +x /etc/profile.d/gradle.sh 
+source /etc/profile.d/gradle.sh 
+gradle -v 
+
