@@ -8,3 +8,4 @@ ALTER TABLE USER_CONFIGURATION ADD column_col VARCHAR(20);
 ALTER TABLE USER_CONFIGURATION
 DROP COLUMN TEST_GUID;
 
+https://www.w3schools.com/sql/sql_insert_into_select.asp
