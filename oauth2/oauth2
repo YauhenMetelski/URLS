@@ -7,3 +7,16 @@ https://docs.spring.io/spring-security/reference/
 
 CSRF
 https://habr.com/ru/post/318748/
+
+https://www.youtube.com/watch?v=-ohlXEJeRX8        google authorization
+
+git
+https://github.com/drucoder/sarafan/tree/AddOAuth2
+properties
+https://gist.github.com/drucoder/92a1616bf90bd3500b1c716ec445fd7f
+
+google where you can create token
+https://console.cloud.google.com/projectselector2/apis/credentials?supportedpurview=project
+
+oauth2 russian
+https://www.digitalocean.com/community/tutorials/oauth-2-ru
