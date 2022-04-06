@@ -1,1 +1,12 @@
 https://habr.com/ru/post/149694/
+
+the default username and password  guest / guest,
+docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+
+
+
+docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+
+
+install
+https://www.vultr.com/docs/install-rabbitmq-server-ubuntu-20-04-lts/
