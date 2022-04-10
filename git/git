@@ -1,2 +1,4 @@
 https://git-scm.com/  all git
 https://pingvinus.ru/git/1572   branches console
+git remote -v    returns url f remote repo
+git remote add origin http....soome/url/....      add remote repo with name origin (this name used instead of  url)

@@ -127,3 +127,5 @@ docker run \
 
 docker run -it appropriate/curl sh    override base command [curl] to [sh]
 
+docker build . -t images-gallery-api ---build image with specified name 
+
