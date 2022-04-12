@@ -1,5 +1,6 @@
 https://git-scm.com/  all git
 https://pingvinus.ru/git/1572   branches console
+<<<<<<< HEAD
 
 git config --list     returns list of global configurations (for example name and emailused for sign in commit)
 
@@ -11,3 +12,7 @@ git pull
 git merge [branch name]
 
 p.130 ProGit book https://git-scm.com/book/en/v2   -- rules commit message
+
+git remote -v    returns url f remote repo
+git remote add origin http....soome/url/....      add remote repo with name origin (this name used instead of  url)
+
