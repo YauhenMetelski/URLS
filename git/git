@@ -1,2 +1,13 @@
 https://git-scm.com/  all git
 https://pingvinus.ru/git/1572   branches console
+
+git config --list     returns list of global configurations (for example name and emailused for sign in commit)
+
+git config user.name yourName    set local user name
+git config --global user.name  yourName set global user name
+
+git pull
+
+git merge [branch name]
+
+p.130 ProGit book https://git-scm.com/book/en/v2   -- rules commit message
