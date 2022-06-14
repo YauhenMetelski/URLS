@@ -1,3 +1,11 @@
 https://nextgentips.com/2022/02/16/how-to-install-apache-zookeeper-in-ubuntu-20-04/
 
 https://phoenixnap.com/kb/install-apache-zookeeper
+
+
+docker commands
+Создание Zookeeper контейнера
+docker run -d --name zookeeper -p 2181:2181 wurstmeister/zookeeper
+
+Создание Kafka контейнера
+docker run -d --name kafka -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 --link zookeeper:zookeeper wurstmeister/kafka
