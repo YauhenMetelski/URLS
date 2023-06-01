@@ -26,3 +26,13 @@ https://habr.com/ru/company/dataart/blog/262817/   common information about auth
 https://habr.com/ru/post/497588/   example bitbucket
 
 https://habr.com/ru/post/528410/ example REST service with Oauth authorization
+
+https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter   configuration without deprecated SpringSecurityConfigurerAdapter
+
+https://www.appsdeveloperblog.com/creating-oauth-2-scope-in-keycloak/    custom scope in keycloak server
+
+Deploy jar into docker container usefull commands:
+
+docker container exec 8ee ls  opt/keycloak  
+docker cp my-remote-user-storage-provider.jar 8eeb6dbb475a:opt/keycloak/providers
+

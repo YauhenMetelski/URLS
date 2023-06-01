@@ -3,3 +3,5 @@ https://postgrespro.ru/docs/postgrespro/9.5/sql-explain план запроса
 https://habr.com/ru/post/203320/  план запроса 3 части
 https://infostart.ru/1c/articles/1196217/
 https://habr.com/ru/post/469415/ isolation level
+https://metanit.com/sql/postgresql/     очень много всего
+https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-explain/#:~:text=The%20EXPLAIN%20statement%20returns%20the,join%20algorithm%20will%20be%20used.  EXPLAIN

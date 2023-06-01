@@ -16,4 +16,4 @@ p.130 ProGit book https://git-scm.com/book/en/v2   -- rules commit message
 git remote -v    returns url f remote repo
 git remote add origin http....soome/url/....      add remote repo with name origin (this name used instead of  url)
 https://devblogs.microsoft.com/oldnewthing/20180312-00/?p=98215  cherry pick antipattern
-
+https://habr.com/ru/company/flant/blog/419733/    6 типичных ошибок и методы для их исправления

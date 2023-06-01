@@ -1,0 +1,17 @@
+jps утилита показывает все занятые порты java
+jps -v расширенный вывод
+netstat -nape |grep 8080  ищем кто занял 8080
+kill -9 9019    здесь 9019 айди процесса
+ctrl f8 установить брейкпоинт
+alt + click on the code, we can see result of code execution
+f2 change variable value
+click on breakpoint and add condition for example (c.getId().equals(3L)). And programm will stop only in this point
+Можно логгировать брейкпоинт (убираем суспенд и пишем что хочем логгировать)
+
+выделяем кусок кода и shift + click LMB in left panel сразу создается брейкпоинт для логгирования.
+ctrl shift a потом restore brealpoint (in actions) восстановит удалённый брейкпоинт
+alt f8 evaluate
+alt enter on the row with breakpoint and choose from dropdown menu (for example stop if invoke from ....method())
+
+на брейкпоинте можно сделать force return (нашел через поиск action) т.е. вернуть значение которого нет в базе например.
+есть удаленный дебаг

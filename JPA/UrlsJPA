@@ -29,3 +29,6 @@ https://docs.oracle.com/javaee/6/tutorial/doc/gjise.html    JAVA EE Tutorial nam
 https://medium.com/geekculture/spring-transactional-rollback-handling-741fcad043c6  transactional handling
 http://akorsa.ru/2017/01/sovety-i-oshibki-v-spring-transactions/  transactions
 https://medium.com/javarevisited/spring-transactional-mistakes-everyone-did-31418e5a6d6b  @Transactional anotated methods call in the same class
+https://vladmihalcea.com/manytoone-jpa-hibernate/  how to avoid not necessary selects
+https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/   unidirectional oneToMany
+https://habr.com/ru/company/otus/blog/649093/   The best way of using Transactional annotation

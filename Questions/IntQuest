@@ -1,0 +1,9 @@
+https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/    set properties without @Value annotation
+https://www.baeldung.com/inject-properties-value-non-spring-class
+java.util.Properties props = System.getProperties().getProperty("propertyName");
+=========================
+@PropertySource("classpath:/com/myProject/config/properties/database.properties")
+@Autowired
+private Environment env;
+env.getProperty("database.connection.driver")
+==========================
